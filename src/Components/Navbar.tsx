@@ -1,12 +1,12 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/basketball.svg";
-import React from "react";
+import ColorModeSwitch from "./colorModeSwitch";
 
 const Navbar = () => {
   return (
-    <HStack>
-      <Image boxSize="60px" src={logo} />
-      <Text>Games</Text>
+    <HStack padding="10px" justifyContent="space-between">
+      <Image boxSize="50px" src={logo} />
+      <ColorModeSwitch />
     </HStack>
   );
 };
