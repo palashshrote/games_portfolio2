@@ -1,15 +1,27 @@
-import React from "react";
-import { Spinner } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
+import Navbar from "./Components/Navbar";
 
 const App = () => {
   return (
-    <Spinner
-      thickness="4px"
-      speed="0.65s"
-      emptyColor="gray.200"
-      color="blue.500"
-      size="xl"
-    />
+    // shorthand using the `Grid` component
+    <Grid
+      templateAreas={{
+        base: `"nav" "main"`,
+        lg: `"nav nav" "aside main"`,
+      }}
+    >
+      <GridItem area="nav">
+        <Navbar />
+      </GridItem>
+      <Show above="lg">
+        <GridItem area="aside" bg="blue">
+          Aside
+        </GridItem>
+      </Show>
+      <GridItem area="main" bg="green">
+        Main
+      </GridItem>
+    </Grid>
   );
 };
 
