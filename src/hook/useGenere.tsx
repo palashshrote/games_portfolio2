@@ -8,9 +8,7 @@ export interface Genre {
 }
 
 const useGenere = () => {
-  const { data, error, isLoading } = useData<Genre>("/genres");
-
-  return { data, error, isLoading };
+  return useData<Genre>("/genres");
 };
 
 export default useGenere;
