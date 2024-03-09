@@ -5,7 +5,7 @@ interface Platform{
     slug: string;
 }
 const usePlatforms = () => {
-    return useData<Platform>('/platforms/lists/parents');
+    return useData<Platform>('/platforms');
 }
 
 
